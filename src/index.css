@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --font-tajawal: 'Tajawal', sans-serif;
+  --font-cairo: 'Cairo', sans-serif;
+  --color-royal: #1b2a47; /* Dark Royal Blue for header/footer */
+  --color-royal-light: #283e6b;
+  --color-gold: #cba86a; /* Gold accent */
+  --color-gold-light: #d8bb88;
+  --color-body: #f5f7fa; /* Light body background */
+}
+
+@layer base {
+  body {
+    direction: rtl;
+    font-family: var(--font-tajawal);
+    background-color: var(--color-body);
+  }
+}
+
+/* Custom Utilities for Glassmorphism */
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  .glass-dark {
+    background: rgba(27, 42, 71, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
