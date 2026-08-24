@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-
+// import logo2 from '../../assets/logo2'
+import logoo from '../../assets/logo2.png'
 const Footer = () => {
   return (
     <footer className="bg-[#1b2a47] text-white py-12 mt-auto">
@@ -14,12 +15,7 @@ const Footer = () => {
                    e.target.nextSibling.style.display = 'flex';
                  }} />
                  {/* Fallback SVG */}
-                 <svg viewBox="0 0 100 100" className="w-full h-full hidden" style={{ display: 'none' }}>
-                    <path d="M70,30 Q90,30 90,50 Q90,70 70,70 L40,70 L40,80 L70,80 Q100,80 100,50 Q100,20 70,20 L30,20 L30,50 L40,50 L40,30 Z" fill="#fff" />
-                    <path d="M20,40 L40,70 L20,90 Z" fill="#e53e3e" />
-                    <circle cx="30" cy="70" r="5" fill="#1b2a47" />
-                    <circle cx="50" cy="90" r="5" fill="#fff" />
-                 </svg>
+            <img src={logoo} alt="logo2" />   
              </div>
              <div className="text-white font-tajawal font-black text-3xl tracking-tight leading-none flex flex-col">
                 <span>بوصلة مصر</span>

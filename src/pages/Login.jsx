@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { motion } from 'framer-motion';
-
+import logo from '../assets/logo.png'
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -15,18 +15,7 @@ const LoginPage = () => {
       >
         {/* Logo Placeholder (replace with actual logo if available) */}
         <div className="flex justify-center mb-6">
-          <div className="relative w-28 h-28 flex items-center justify-center">
-             {/* Using an img if you have the logo asset, else a fallback CSS shape resembling it */}
-             <div className="w-24 h-24 bg-[#0a1931] rounded-tl-[40px] rounded-br-[40px] rounded-tr-[10px] rounded-bl-[10px] flex items-center justify-center relative transform -rotate-12">
-                <div className="w-16 h-16 bg-[#fcfbf9] rounded-tl-[30px] rounded-br-[30px] rounded-tr-[5px] rounded-bl-[5px] absolute"></div>
-                {/* Compass Needle */}
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45 flex items-center justify-center">
-                  <div className="w-0 h-0 border-l-8 border-r-8 border-b-[24px] border-l-transparent border-r-transparent border-b-red-600 absolute top-[-12px]"></div>
-                  <div className="w-0 h-0 border-l-8 border-r-8 border-t-[24px] border-l-transparent border-r-transparent border-t-[#0a1931] absolute bottom-[-12px]"></div>
-                </div>
-             </div>
-             <div className="absolute bottom-0 right-2 w-4 h-4 bg-[#0a1931] rounded-full"></div>
-          </div>
+         <img src={logo} alt='logo'/>
         </div>
 
         <div className="text-center mb-10">

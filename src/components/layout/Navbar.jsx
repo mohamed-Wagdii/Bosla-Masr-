@@ -1,63 +1,131 @@
-import { Link } from 'react-router-dom';
-import { Bell, User, Globe } from 'lucide-react';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Bell, Menu, User, X } from "lucide-react";
+import logo from "../../assets/logo.png";
+
+const navLinks = [
+  { label: "الصفحة الرئيسية", to: "/" },
+  { label: "الوزارات", to: "/ministry" },
+  { label: "مبادرات وبرامج تدريبية", to: "/initiative" },
+  { label: "الأخبار والفعاليات", to: "/#news" },
+  { label: "وظائف الوزارات", to: "/#jobs" },
+  { label: "عن بوصلة مصر", to: "/about" },
+];
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { pathname } = useLocation();
+
   return (
-    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          
-          {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center gap-3">
-              {/* Logo icon as requested */}
-              <div className="w-12 h-12 relative flex items-center justify-center">
-                 <img src="/logo-light.png" alt="بوصلة مصر" className="w-full h-full object-contain" onError={(e) => {
-                   e.target.style.display = 'none';
-                   e.target.nextSibling.style.display = 'flex';
-                 }} />
-                 {/* Fallback SVG if image not found */}
-                 <svg viewBox="0 0 100 100" className="w-full h-full hidden" style={{ display: 'none' }}>
-                    <path d="M70,30 Q90,30 90,50 Q90,70 70,70 L40,70 L40,80 L70,80 Q100,80 100,50 Q100,20 70,20 L30,20 L30,50 L40,50 L40,30 Z" fill="#1b2a47" />
-                    <path d="M20,40 L40,70 L20,90 Z" fill="#e53e3e" />
-                    <circle cx="30" cy="70" r="5" fill="#fff" />
-                    <circle cx="50" cy="90" r="5" fill="#1b2a47" />
-                 </svg>
-              </div>
-              <div className="text-[#1b2a47] font-tajawal font-black text-2xl tracking-tight leading-none flex flex-col">
-                <span>بوصلة مصر</span>
-                <span className="text-yellow-600 text-[10px] font-normal">دليلك للخدمات الحكومية</span>
-              </div>
-            </Link>
+    <nav
+      className="sticky top-0 z-50 border-b border-slate-100 bg-white/95 shadow-sm backdrop-blur"
+      dir="rtl"
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-20 items-center justify-between gap-4 lg:gap-8">
+          <Link to="/" className="flex shrink-0 items-center gap-2.5 sm:gap-3">
+            <div className="flex h-11 w-11 items-center justify-center sm:h-12 sm:w-12">
+              <img
+                src={logo}
+                alt="بوصلة مصر"
+                className="h-full w-full object-contain"
+              />
+            </div>
+            <div className="flex flex-col leading-none tracking-tight text-[#1b2a47]">
+              <span className="text-xl font-black sm:text-2xl">بوصلة مصر</span>
+              <span className="mt-1 hidden text-[10px] font-normal text-yellow-600 sm:block">
+                دليلك للخدمات الحكومية
+              </span>
+            </div>
+          </Link>
+
+          <div className="hidden flex-1 items-center justify-center gap-x-6 xl:flex 2xl:gap-x-8">
+            {navLinks.map((link) => {
+              const isActive = link.to === pathname;
+
+              return (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`border-b-2 py-2 text-sm font-medium transition-colors hover:border-red-700 hover:text-red-700 ${isActive ? "border-red-700 text-red-700" : "border-transparent text-gray-500"}`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
-          {/* Center Navigation */}
-          <div className="hidden md:flex space-x-8 space-x-reverse">
-            <Link to="/" className="text-gray-900 hover:text-[var(--color-gold)] font-medium transition-colors border-b-2 border-transparent hover:border-[var(--color-gold)] py-2">الصفحة الرئيسية</Link>
-            <Link to="/ministry" className="text-gray-500 hover:text-gray-900 font-medium transition-colors py-2">وزارات</Link>
-            <Link to="/initiative" className="text-gray-500 hover:text-gray-900 font-medium transition-colors py-2">مبادرات وبرامج تدريبية</Link>
-            <a href="#" className="text-gray-500 hover:text-gray-900 font-medium transition-colors py-2">الأخبار والفعاليات</a>
-            <a href="#" className="text-gray-500 hover:text-gray-900 font-medium transition-colors py-2">وظائف الوزارات</a>
-            <Link to="/about" className="text-gray-500 hover:text-gray-900 font-medium transition-colors py-2">عن بوصلة مصر</Link>
-          </div>
-
-          {/* Left Side Actions */}
-          <div className="flex items-center space-x-4 space-x-reverse">
-            <button className="p-2 text-gray-500 hover:text-gray-900 transition-colors rounded-full hover:bg-gray-100">
-              <Bell className="w-5 h-5" />
+          <div className="hidden shrink-0 items-center gap-2 sm:flex lg:gap-3">
+            <button
+              type="button"
+              aria-label="الإشعارات"
+              className="rounded-full p-2.5 text-gray-500 transition-colors hover:bg-slate-100 hover:text-[#1b2a47]"
+            >
+              <Bell className="h-5 w-5" />
             </button>
-            <Link to="/profile" className="p-2 text-gray-500 hover:text-gray-900 transition-colors rounded-full hover:bg-gray-100 block">
-              <User className="w-5 h-5" />
+            <Link
+              to="/profile"
+              aria-label="الملف الشخصي"
+              className="rounded-full p-2.5 text-gray-500 transition-colors hover:bg-slate-100 hover:text-[#1b2a47]"
+            >
+              <User className="h-5 w-5" />
             </Link>
-            <Link to="/login" className="bg-red-700 hover:bg-red-800 text-white px-6 py-2 rounded-full font-medium transition-colors shadow-sm block">
+            <Link
+              to="/login"
+              className="rounded-full bg-red-700 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-red-800 lg:px-5"
+            >
               تسجيل الدخول
             </Link>
-            <Link to="/profile" className="bg-[#1b2a47] text-white w-9 h-9 flex items-center justify-center rounded-full text-sm font-bold hover:bg-blue-900 transition-colors">
+            <Link
+              to="/profile"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-[#1b2a47] text-sm font-bold text-white transition-colors hover:bg-blue-900"
+            >
               ع
             </Link>
           </div>
 
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((current) => !current)}
+            aria-label={isMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
+            aria-expanded={isMenuOpen}
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 text-[#1b2a47] transition-colors hover:bg-slate-50 xl:hidden"
+          >
+            {isMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </button>
         </div>
+
+        {isMenuOpen && (
+          <div className="border-t border-slate-100 py-4 xl:hidden">
+            <div className="grid gap-1 text-right">
+              {navLinks.map((link) => {
+                const isActive = link.to === pathname;
+
+                return (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`rounded-xl px-4 py-3 font-medium transition-colors hover:bg-red-50 hover:text-red-700 ${isActive ? "bg-red-50 text-red-700" : "text-gray-600"}`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+              <Link
+                to="/login"
+                onClick={() => setIsMenuOpen(false)}
+                className="mt-2 rounded-xl bg-red-700 px-4 py-3 text-center font-bold text-white transition-colors hover:bg-red-800"
+              >
+                تسجيل الدخول
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
