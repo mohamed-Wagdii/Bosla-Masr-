@@ -11,11 +11,11 @@ const LoginPage = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="bg-[#fcfbf9] w-full max-w-[600px] rounded-[32px] p-10 md:p-14 shadow-2xl relative"
+        className="bg-[#fcfbf9] w-full max-w-[600px] rounded-[32px] p-6 sm:p-10 md:p-14 shadow-2xl relative"
       >
         {/* Logo Placeholder (replace with actual logo if available) */}
         <div className="flex justify-center mb-6">
-         <img src={logo} alt='logo'/>
+         <img src={logo} alt='logo' className="max-w-[120px] h-auto mx-auto" />
         </div>
 
         <div className="text-center mb-10">

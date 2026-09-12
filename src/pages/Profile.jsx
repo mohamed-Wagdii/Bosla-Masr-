@@ -14,7 +14,7 @@ const ProfilePage = () => {
         <h1 className="text-3xl font-black text-[#1b2a47] mb-8">الملف الشخصي</h1>
 
         {/* Profile Header Card */}
-        <div className="relative bg-[#1b2a47] rounded-[32px] p-8 md:p-12 mb-12 overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="relative bg-[#1b2a47] rounded-[32px] p-6 md:p-8 lg:p-12 mb-12 overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
           {/* Circuit Board Background Pattern Placeholder */}
           <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#d8bb88 2px, transparent 2px)', backgroundSize: '30px 30px' }}></div>
           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -39,7 +39,7 @@ const ProfilePage = () => {
               />
             </div>
             <div className="text-center md:text-right">
-              <h2 className="text-3xl font-black text-white mb-2">مريم عصام</h2>
+              <h2 className="text-2xl md:text-3xl font-black text-white mb-2">مريم عصام</h2>
               <p className="text-gray-300 font-medium mb-1">Marieme@gmail.com</p>
               <p className="text-[#d8bb88] font-bold text-sm">القاهرة</p>
             </div>
@@ -91,10 +91,10 @@ const ProfilePage = () => {
 
           <div className="relative">
             {/* Carousel Navigation */}
-            <button className="absolute top-1/2 -right-5 -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:text-[#1b2a47] shadow-md z-10 hidden md:flex">
+            <button className="absolute top-1/2 -right-5 -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:text-[#1b2a47] shadow-md z-10 flex">
               <ChevronRight size={20} />
             </button>
-            <button className="absolute top-1/2 -left-5 -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:text-[#1b2a47] shadow-md z-10 hidden md:flex">
+            <button className="absolute top-1/2 -left-5 -translate-y-1/2 w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:text-[#1b2a47] shadow-md z-10 flex">
               <ChevronLeft size={20} />
             </button>
 

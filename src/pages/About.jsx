@@ -61,7 +61,7 @@ const AboutPage = () => {
               className="flex-1 order-1 md:order-2"
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-                <img src={bosla} alt="bosal" />
+                <img src={bosla} alt="bosal" className="w-full h-auto object-contain" />
                 {/* Graphics Overlay */}
                 <div className="absolute top-8 right-8 bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-xl flex items-center justify-center">
                   <div className="grid grid-cols-3 gap-2">
@@ -313,7 +313,7 @@ const AboutPage = () => {
               alt="Vision"
               className="w-full h-[300px] md:h-[400px] object-cover"
             /> */}
-            <img src={ro2ytrna} alt="ro2ytrna" />
+            <img src={ro2ytrna} alt="ro2ytrna" className="w-full h-auto object-contain" />
           </div>
           <p className="text-lg md:text-xl text-gray-700 font-bold max-w-4xl mx-auto leading-relaxed">
             أن نكون نقطة الوصول الأولى للشباب المصري، لاكتشاف الخدمات والفرص
@@ -339,7 +339,7 @@ const AboutPage = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-[#1b2a47]/80 via-[#1b2a47]/30 to-transparent" />
         </div>
         <div className="relative z-10 text-center px-4">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4">
             ابدأ رحلتك مع بوصلة مصر
           </h2>
           <p className="text-lg md:text-xl text-gray-300 mb-8 font-medium">

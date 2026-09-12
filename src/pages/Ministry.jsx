@@ -25,7 +25,7 @@ const SectionCard = ({ item, isHovered, onHover, onLeave, isSpecial }) => {
 
   return (
     <motion.div
-      className={`relative flex h-[300px] flex-col overflow-hidden rounded-2xl border bg-white cursor-pointer transition-colors duration-300 ${
+      className={`relative flex h-[220px] sm:h-[260px] md:h-[300px] flex-col overflow-hidden rounded-2xl border bg-white cursor-pointer transition-colors duration-300 ${
         isHovered
           ? "z-20 border-[#d8bb88] ring-4 ring-[#d8bb88]/15 shadow-2xl"
           : "z-10 border-gray-100 shadow-sm"
@@ -185,10 +185,10 @@ const Ministry = () => {
               transition={{ duration: 0.8 }}
               className="flex-1 text-center md:text-right"
             >
-              <h1 className="text-4xl md:text-5xl font-black text-[#1b2a47] mb-6 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#1b2a47] mb-4 md:mb-6 leading-tight">
                 وزارة الاتصالات وتكنولوجيا <br/> المعلومات
               </h1>
-              <p className="text-gray-500 font-medium text-lg mb-10">
+              <p className="text-gray-500 font-medium text-base md:text-lg mb-6 md:mb-10">
                 كل خدمات وفرص الوزارات المصرية في مكان واحد
               </p>
               <button className="bg-transparent border border-gray-300 text-gray-700 px-10 py-3 rounded-full font-bold hover:border-[#1b2a47] hover:text-[#1b2a47] transition-all shadow-sm">
@@ -215,7 +215,7 @@ const Ministry = () => {
                   </svg>
                 </div>
               </div> */}
-<img src={frameetes} alt="kk" />
+<img src={frameetes} alt="kk" className="w-full h-auto max-w-sm md:max-w-full object-contain" />
             </motion.div>
 
           </div>
