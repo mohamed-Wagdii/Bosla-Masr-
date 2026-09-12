@@ -109,30 +109,27 @@ const MinistryCard = ({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={onClick}
-        className={`relative flex items-stretch p-3 rounded-[28px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[300px] ${
-          isActive
+        className={`relative flex items-stretch p-3 rounded-[28px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[240px] ${isActive
             ? "bg-[#1b2a47] text-white shadow-2xl scale-[1.02] border border-[#d8bb88]/30"
             : "bg-white text-gray-800 border border-gray-200 hover:border-gray-300 hover:shadow-md scale-100"
-        }`}
+          }`}
       >
         {/* ================= IMAGE ================= */}
 
         <div
-          className={`w-[160px] rounded-[22px] flex flex-col items-center justify-center overflow-hidden border transition-all duration-500 flex-shrink-0 ${
-            isActive
+          className={`w-[160px] rounded-[22px] flex flex-col items-center justify-center overflow-hidden border transition-all duration-500 flex-shrink-0 ${isActive
               ? "border-[#d8bb88] bg-gradient-to-b from-slate-600 to-slate-800"
               : "border-gray-100 bg-white"
-          }`}
+            }`}
         >
           <div className=" h-full flex items-center justify-center">
             <img
               src={isHovered ? etesalat2 : eteestalat}
               alt="Pharaoh"
-              className={`h-full transition-all duration-300 ${
-                isActive
+              className={`h-full transition-all duration-300 ${isActive
                   ? "filter brightness-0 invert sepia saturate-200 hue-rotate-[350deg]"
                   : "filter"
-              }`}
+                }`}
             />
           </div>
         </div>
@@ -141,50 +138,45 @@ const MinistryCard = ({
 
         <div className="flex-1 px-10 py-5 text-right flex flex-col justify-center">
           <h3
-            className={`font-black text-3xl mb-6 ${
-              isActive ? "text-white" : "text-[#1b2a47]"
-            }`}
+            className={`font-black text-3xl mb-6 ${isActive ? "text-white" : "text-[#1b2a47]"
+              }`}
           >
             {ministry.title}
           </h3>
 
           <div className="grid grid-cols-2 gap-4 mb-6">
             <span
-              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
-                isActive
+              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
-              }`}
+                }`}
             >
               12 خدمة
             </span>
 
             <span
-              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
-                isActive
+              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
-              }`}
+                }`}
             >
               8 مبادرات
             </span>
 
             <span
-              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
-                isActive
+              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
-              }`}
+                }`}
             >
               15 كورس
             </span>
 
             <span
-              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
-                isActive
+              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
-              }`}
+                }`}
             >
               6 فعاليات
             </span>
@@ -195,11 +187,10 @@ const MinistryCard = ({
               e.stopPropagation();
               onMoreClick();
             }}
-            className={`w-full py-3.5 rounded-full text-base font-bold transition-colors duration-500 border ${
-              isActive
+            className={`w-full py-3.5 rounded-full text-base font-bold transition-colors duration-500 border ${isActive
                 ? "border-gray-500 text-gray-300 hover:bg-white/10 hover:text-white"
                 : "border-gray-200 text-gray-700 hover:bg-gray-50"
-            }`}
+              }`}
           >
             المزيد
           </button>
@@ -223,9 +214,8 @@ const ServiceBox = ({
   <div
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
-    className={`flex items-center gap-4 bg-white px-6 py-4 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:border-[#d8bb88] transition-all cursor-pointer w-[360px] group ${
-      isRight ? "flex-row-reverse text-left" : "text-right"
-    }`}
+    className={`flex items-center gap-4 bg-white px-6 py-4 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:border-[#d8bb88] transition-all cursor-pointer w-[360px] group ${isRight ? "flex-row-reverse text-left" : "text-right"
+      }`}
   >
     <div className="bg-[#f5f7fa] p-3 rounded-xl text-[#1b2a47] group-hover:bg-[#1b2a47] group-hover:text-white transition-colors duration-300">
       <Icon className="w-7 h-7" />
@@ -418,7 +408,7 @@ const Home = () => {
 
         {/* Cards Stack & Wheel Wrapper */}
 
-        <div className="relative z-10 flex flex-col items-center w-full max-w-[52%] ml-[4%] mt-24">
+        <div className="relative z-10 flex flex-col items-center w-full max-w-[55%] mx-auto mt-24">
           {/* Golden Wheel */}
 
           <motion.div
@@ -473,8 +463,8 @@ const Home = () => {
                   idx === 0
                     ? "top"
                     : idx === 1
-                    ? "middle"
-                    : "bottom"
+                      ? "middle"
+                      : "bottom"
                 }
               />
             ))}
@@ -631,96 +621,95 @@ const Home = () => {
       {/* ================= NEWS SECTION ================== */}
       {/* ================================================= */}
 
-  <div className="w-full bg-white py-20">
-  <div className="max-w-7xl mx-auto px-4 text-center">
-    <h2 className="text-5xl font-black text-[#1b2a47] mb-16">
-      اخر الاخبار
-    </h2>
+      <div className="w-full bg-white py-20">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-5xl font-black text-[#1b2a47] mb-16">
+            اخر الاخبار
+          </h2>
 
-    <div className="flex items-center justify-between gap-2">
-      {/* السهم الأيمن */}
-      <button
-        onClick={showNextNews}
-        aria-label="الخبر التالي"
-        className="p-3 rounded-full border border-gray-200 bg-white hover:bg-gray-50 shadow-md transition-all text-gray-500 hover:text-gray-800 flex-shrink-0 z-50"
-      >
-        <ChevronRight className="w-5 h-5" />
-      </button>
-
-      {/* حاوية الشرايح المتداخلة */}
-      <div className="flex-1 flex justify-center items-center overflow-visible py-10">
-        <motion.div
-          key={newsStartIndex}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3 }}
-          onMouseLeave={() => setHoveredNewsIndex(null)}
-          className="flex items-center justify-center -space-x-12 sm:-space-x-16 space-x-reverse"
-        >
-          {visibleNews.map((item, idx) => (
-            <div
-              key={`${item.title}-${idx}`}
-              onMouseEnter={() => setHoveredNewsIndex(idx)}
-              style={{
-                zIndex:
-                  (hoveredNewsIndex ?? 0) === idx
-                    ? 50
-                    : visibleNews.length - idx,
-              }}
-              className={`relative w-72 sm:w-80 bg-white border border-gray-200 rounded-[28px] p-5 transition-all duration-300 flex-shrink-0 text-right flex flex-col justify-between h-[480px] cursor-pointer ${
-                (hoveredNewsIndex ?? 0) === idx
-                    ? "scale-105 opacity-100 border-[#d8bb88] shadow-2xl"
-                    : "scale-[0.93] opacity-55 blur-[0.5px] shadow-sm"
-              }`}
+          <div className="flex items-center justify-between gap-2">
+            {/* السهم الأيمن */}
+            <button
+              onClick={showNextNews}
+              aria-label="الخبر التالي"
+              className="p-3 rounded-full border border-gray-200 bg-white hover:bg-gray-50 shadow-md transition-all text-gray-500 hover:text-gray-800 flex-shrink-0 z-50"
             >
-              {/* صورة الخبر */}
-              <div className="relative overflow-hidden rounded-[20px] h-56 w-full mb-5 flex-shrink-0">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  onError={(event) => {
-                    event.currentTarget.onerror = null;
-                    event.currentTarget.src = header;
-                  }}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <ChevronRight className="w-5 h-5" />
+            </button>
 
-              {/* تفاصيل الخبر */}
-              <div className="flex flex-col flex-1 justify-between">
-                <div>
-                  <h3 className="font-bold text-lg text-[#1b2a47] line-clamp-2 mb-3 leading-relaxed">
-                    {item.title}
-                  </h3>
-                  
-                  {item.description && (
-                    <p className="text-sm text-gray-400 line-clamp-2 mb-5 leading-normal">
-                      {item.description}
-                    </p>
-                  )}
-                </div>
+            {/* حاوية الشرايح المتداخلة */}
+            <div className="flex-1 flex justify-center items-center overflow-visible py-10">
+              <motion.div
+                key={newsStartIndex}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3 }}
+                onMouseLeave={() => setHoveredNewsIndex(null)}
+                className="flex items-center justify-center -space-x-12 sm:-space-x-16 space-x-reverse"
+              >
+                {visibleNews.map((item, idx) => (
+                  <div
+                    key={`${item.title}-${idx}`}
+                    onMouseEnter={() => setHoveredNewsIndex(idx)}
+                    style={{
+                      zIndex:
+                        (hoveredNewsIndex ?? 0) === idx
+                          ? 50
+                          : visibleNews.length - idx,
+                    }}
+                    className={`relative w-72 sm:w-80 bg-white border border-gray-200 rounded-[28px] p-5 transition-all duration-300 flex-shrink-0 text-right flex flex-col justify-between h-[480px] cursor-pointer ${(hoveredNewsIndex ?? 0) === idx
+                        ? "scale-105 opacity-100 border-[#d8bb88] shadow-2xl"
+                        : "scale-[0.93] opacity-55 blur-[0.5px] shadow-sm"
+                      }`}
+                  >
+                    {/* صورة الخبر */}
+                    <div className="relative overflow-hidden rounded-[20px] h-56 w-full mb-5 flex-shrink-0">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        onError={(event) => {
+                          event.currentTarget.onerror = null;
+                          event.currentTarget.src = header;
+                        }}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
 
-                {/* زر اقرأ المزيد */}
-                <button className="w-full py-2 px-4 rounded-full border border-[#1b2a47] text-[#1b2a47] font-bold text-xs hover:bg-[#1b2a47] hover:text-white dark:border-[#d8bb88] dark:text-[#d8bb88] dark:hover:bg-[#d8bb88] dark:hover:text-[#1b2a47] transition-colors duration-300">
-                  اقرأ المزيد
-                </button>
-              </div>
+                    {/* تفاصيل الخبر */}
+                    <div className="flex flex-col flex-1 justify-between">
+                      <div>
+                        <h3 className="font-bold text-lg text-[#1b2a47] line-clamp-2 mb-3 leading-relaxed">
+                          {item.title}
+                        </h3>
+
+                        {item.description && (
+                          <p className="text-sm text-gray-400 line-clamp-2 mb-5 leading-normal">
+                            {item.description}
+                          </p>
+                        )}
+                      </div>
+
+                      {/* زر اقرأ المزيد */}
+                      <button className="w-full py-2 px-4 rounded-full border border-[#1b2a47] text-[#1b2a47] font-bold text-xs hover:bg-[#1b2a47] hover:text-white dark:border-[#d8bb88] dark:text-[#d8bb88] dark:hover:bg-[#d8bb88] dark:hover:text-[#1b2a47] transition-colors duration-300">
+                        اقرأ المزيد
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
             </div>
-          ))}
-        </motion.div>
-      </div>
 
-      {/* السهم الأيسر */}
-      <button
-        onClick={showPreviousNews}
-        aria-label="الخبر السابق"
-        className="p-3 rounded-full border border-gray-200 bg-white hover:bg-gray-50 shadow-md transition-all text-gray-500 hover:text-gray-800 flex-shrink-0 z-50"
-      >
-        <ChevronLeft className="w-5 h-5" />
-      </button>
-    </div>
-  </div>
-</div>
+            {/* السهم الأيسر */}
+            <button
+              onClick={showPreviousNews}
+              aria-label="الخبر السابق"
+              className="p-3 rounded-full border border-gray-200 bg-white hover:bg-gray-50 shadow-md transition-all text-gray-500 hover:text-gray-800 flex-shrink-0 z-50"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
