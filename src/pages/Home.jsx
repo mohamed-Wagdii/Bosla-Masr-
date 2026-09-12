@@ -32,7 +32,7 @@ const MinistryCard = ({
 
   return (
     <div
-      className="relative flex justify-center w-full max-w-[750px] z-10 transition-all duration-500 ease-in-out"
+      className="relative flex justify-center w-full z-10 transition-all duration-500 ease-in-out"
       dir="rtl"
     >
       {/* SVG Connector Lines */}
@@ -109,7 +109,7 @@ const MinistryCard = ({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={onClick}
-        className={`relative flex items-stretch p-3 rounded-[28px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[220px] ${
+        className={`relative flex items-stretch p-3 rounded-[28px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[240px] ${
           isActive
             ? "bg-[#1b2a47] text-white shadow-2xl scale-[1.02] border border-[#d8bb88]/30"
             : "bg-white text-gray-800 border border-gray-200 hover:border-gray-300 hover:shadow-md scale-100"
@@ -118,7 +118,7 @@ const MinistryCard = ({
         {/* ================= IMAGE ================= */}
 
         <div
-          className={`w-[200px] rounded-[22px] flex flex-col items-center justify-center overflow-hidden border transition-all duration-500 flex-shrink-0 ${
+          className={`w-[160px] rounded-[22px] flex flex-col items-center justify-center overflow-hidden border transition-all duration-500 flex-shrink-0 ${
             isActive
               ? "border-[#d8bb88] bg-gradient-to-b from-slate-600 to-slate-800"
               : "border-gray-100 bg-white"
@@ -139,9 +139,9 @@ const MinistryCard = ({
 
         {/* ================= TEXT ================= */}
 
-        <div className="flex-1 px-8 py-4 text-right flex flex-col justify-center">
+        <div className="flex-1 px-10 py-5 text-right flex flex-col justify-center">
           <h3
-            className={`font-black text-2xl mb-6 ${
+            className={`font-black text-3xl mb-6 ${
               isActive ? "text-white" : "text-[#1b2a47]"
             }`}
           >
@@ -150,7 +150,7 @@ const MinistryCard = ({
 
           <div className="grid grid-cols-2 gap-4 mb-6">
             <span
-              className={`text-sm px-3 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -160,7 +160,7 @@ const MinistryCard = ({
             </span>
 
             <span
-              className={`text-sm px-3 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -170,7 +170,7 @@ const MinistryCard = ({
             </span>
 
             <span
-              className={`text-sm px-3 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -180,7 +180,7 @@ const MinistryCard = ({
             </span>
 
             <span
-              className={`text-sm px-3 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-base px-4 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -418,7 +418,7 @@ const Home = () => {
 
         {/* Cards Stack & Wheel Wrapper */}
 
-        <div className="relative z-10 flex flex-col items-center w-full max-w-[750px] mx-auto mt-24">
+        <div className="relative z-10 flex flex-col items-center w-full max-w-[55%] mx-auto mt-24">
           {/* Golden Wheel */}
 
           <motion.div
