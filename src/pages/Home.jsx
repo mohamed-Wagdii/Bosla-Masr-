@@ -32,15 +32,15 @@ const MinistryCard = ({
 
   return (
     <div
-      className="relative flex justify-center w-full max-w-[550px] z-10 transition-all duration-500 ease-in-out"
+      className="relative flex justify-center w-full max-w-[750px] z-10 transition-all duration-500 ease-in-out"
       dir="rtl"
     >
       {/* SVG Connector Lines */}
 
       {position === "middle" && (
-        <svg className="absolute top-1/2 right-[-260px] w-[260px] h-[40px] overflow-visible -translate-y-1/2 z-0">
+        <svg className="absolute top-1/2 right-[-200px] w-[200px] h-[40px] overflow-visible -translate-y-1/2 z-0">
           <path
-            d="M 0 20 L 260 20"
+            d="M 0 20 L 200 20"
             fill="none"
             stroke="#d8bb88"
             strokeWidth="2"
@@ -48,7 +48,7 @@ const MinistryCard = ({
           />
 
           <circle
-            cx="260"
+            cx="200"
             cy="20"
             r="8"
             fill="#d8bb88"
@@ -60,9 +60,9 @@ const MinistryCard = ({
       )}
 
       {position === "top" && (
-        <svg className="absolute top-1/2 right-[-260px] w-[260px] h-[120px] overflow-visible -translate-y-[2px] z-0">
+        <svg className="absolute top-1/2 right-[-200px] w-[200px] h-[120px] overflow-visible -translate-y-[2px] z-0">
           <path
-            d="M 0 0 L 40 0 L 260 100"
+            d="M 0 0 L 40 0 L 200 100"
             fill="none"
             stroke="#d8bb88"
             strokeWidth="2"
@@ -70,7 +70,7 @@ const MinistryCard = ({
           />
 
           <circle
-            cx="260"
+            cx="200"
             cy="100"
             r="8"
             fill="#d8bb88"
@@ -82,9 +82,9 @@ const MinistryCard = ({
       )}
 
       {position === "bottom" && (
-        <svg className="absolute bottom-1/2 right-[-260px] w-[260px] h-[120px] overflow-visible translate-y-[2px] z-0">
+        <svg className="absolute bottom-1/2 right-[-200px] w-[200px] h-[120px] overflow-visible translate-y-[2px] z-0">
           <path
-            d="M 0 120 L 40 120 L 260 20"
+            d="M 0 120 L 40 120 L 200 20"
             fill="none"
             stroke="#d8bb88"
             strokeWidth="2"
@@ -92,7 +92,7 @@ const MinistryCard = ({
           />
 
           <circle
-            cx="260"
+            cx="200"
             cy="20"
             r="8"
             fill="#d8bb88"
@@ -109,7 +109,7 @@ const MinistryCard = ({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={onClick}
-        className={`relative flex items-stretch p-2 rounded-[24px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[180px] ${
+        className={`relative flex items-stretch p-3 rounded-[28px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[220px] ${
           isActive
             ? "bg-[#1b2a47] text-white shadow-2xl scale-[1.02] border border-[#d8bb88]/30"
             : "bg-white text-gray-800 border border-gray-200 hover:border-gray-300 hover:shadow-md scale-100"
@@ -118,7 +118,7 @@ const MinistryCard = ({
         {/* ================= IMAGE ================= */}
 
         <div
-          className={`w-[160px] rounded-[18px] flex flex-col items-center justify-center overflow-hidden border transition-all duration-500 flex-shrink-0 ${
+          className={`w-[200px] rounded-[22px] flex flex-col items-center justify-center overflow-hidden border transition-all duration-500 flex-shrink-0 ${
             isActive
               ? "border-[#d8bb88] bg-gradient-to-b from-slate-600 to-slate-800"
               : "border-gray-100 bg-white"
@@ -139,18 +139,18 @@ const MinistryCard = ({
 
         {/* ================= TEXT ================= */}
 
-        <div className="flex-1 px-5 py-3 text-right flex flex-col justify-center">
+        <div className="flex-1 px-8 py-4 text-right flex flex-col justify-center">
           <h3
-            className={`font-black text-xl mb-4 ${
+            className={`font-black text-2xl mb-6 ${
               isActive ? "text-white" : "text-[#1b2a47]"
             }`}
           >
             {ministry.title}
           </h3>
 
-          <div className="grid grid-cols-2 gap-3 mb-5">
+          <div className="grid grid-cols-2 gap-4 mb-6">
             <span
-              className={`text-xs px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-sm px-3 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -160,7 +160,7 @@ const MinistryCard = ({
             </span>
 
             <span
-              className={`text-xs px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-sm px-3 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -170,7 +170,7 @@ const MinistryCard = ({
             </span>
 
             <span
-              className={`text-xs px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-sm px-3 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -180,7 +180,7 @@ const MinistryCard = ({
             </span>
 
             <span
-              className={`text-xs px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-sm px-3 py-3 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -195,7 +195,7 @@ const MinistryCard = ({
               e.stopPropagation();
               onMoreClick();
             }}
-            className={`w-full py-2.5 rounded-full text-sm font-bold transition-colors duration-500 border ${
+            className={`w-full py-3.5 rounded-full text-base font-bold transition-colors duration-500 border ${
               isActive
                 ? "border-gray-500 text-gray-300 hover:bg-white/10 hover:text-white"
                 : "border-gray-200 text-gray-700 hover:bg-gray-50"
@@ -418,7 +418,7 @@ const Home = () => {
 
         {/* Cards Stack & Wheel Wrapper */}
 
-        <div className="relative z-10 flex flex-col items-center w-full max-w-[550px] mx-auto mt-24">
+        <div className="relative z-10 flex flex-col items-center w-full max-w-[750px] mx-auto mt-24">
           {/* Golden Wheel */}
 
           <motion.div
@@ -533,15 +533,15 @@ const Home = () => {
             {/* Compass */}
 
             <div
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] z-0"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] z-0"
               onMouseLeave={() => setNeedleAngle(15)}
             >
-              <div className="w-full h-full rounded-full border-[18px] border-[#1b2a47] relative shadow-xl bg-white flex items-center justify-center">
-                <div className="absolute inset-4 rounded-full border-[4px] border-dashed border-red-500/30" />
+              <div className="w-full h-full rounded-full border-[16px] border-[#1b2a47] relative shadow-xl bg-white flex items-center justify-center">
+                <div className="absolute inset-4 rounded-full border-[3px] border-dashed border-red-500/30" />
 
                 <div className="absolute inset-10 rounded-full border border-gray-100 flex items-center justify-center">
                   <motion.div
-                    className="relative w-20 h-80 flex flex-col items-center justify-center origin-center"
+                    className="relative w-16 h-[280px] flex flex-col items-center justify-center origin-center"
                     animate={{ rotate: needleAngle }}
                     transition={{
                       type: "spring",
@@ -550,9 +550,9 @@ const Home = () => {
                       mass: 0.8,
                     }}
                   >
-                    <div className="w-0 h-0 border-l-[35px] border-l-transparent border-r-[35px] border-r-transparent border-b-[160px] border-b-[#e53e3e]" />
+                    <div className="w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-b-[140px] border-b-[#e53e3e]" />
 
-                    <div className="w-0 h-0 border-l-[35px] border-l-transparent border-r-[35px] border-r-transparent border-t-[160px] border-t-[#1b2a47]" />
+                    <div className="w-0 h-0 border-l-[30px] border-l-transparent border-r-[30px] border-r-transparent border-t-[140px] border-t-[#1b2a47]" />
 
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#d8bb88] border-[4px] border-white shadow-md z-10 flex items-center justify-center">
                       <div className="w-4 h-4 rounded-full bg-[#1b2a47]" />
