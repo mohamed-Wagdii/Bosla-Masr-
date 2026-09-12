@@ -32,7 +32,7 @@ const MinistryCard = ({
 
   return (
     <div
-      className="relative flex justify-center w-full max-w-[450px] z-10 transition-all duration-500 ease-in-out"
+      className="relative flex justify-center w-full max-w-[550px] z-10 transition-all duration-500 ease-in-out"
       dir="rtl"
     >
       {/* SVG Connector Lines */}
@@ -109,7 +109,7 @@ const MinistryCard = ({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={onClick}
-        className={`relative flex items-stretch p-1.5 rounded-[24px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[140px] ${
+        className={`relative flex items-stretch p-2 rounded-[24px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[180px] ${
           isActive
             ? "bg-[#1b2a47] text-white shadow-2xl scale-[1.02] border border-[#d8bb88]/30"
             : "bg-white text-gray-800 border border-gray-200 hover:border-gray-300 hover:shadow-md scale-100"
@@ -118,7 +118,7 @@ const MinistryCard = ({
         {/* ================= IMAGE ================= */}
 
         <div
-          className={`w-[130px] rounded-[18px] flex flex-col items-center justify-center overflow-hidden border transition-all duration-500 flex-shrink-0 ${
+          className={`w-[160px] rounded-[18px] flex flex-col items-center justify-center overflow-hidden border transition-all duration-500 flex-shrink-0 ${
             isActive
               ? "border-[#d8bb88] bg-gradient-to-b from-slate-600 to-slate-800"
               : "border-gray-100 bg-white"
@@ -139,18 +139,18 @@ const MinistryCard = ({
 
         {/* ================= TEXT ================= */}
 
-        <div className="flex-1 px-4 py-2 text-right flex flex-col justify-center">
+        <div className="flex-1 px-5 py-3 text-right flex flex-col justify-center">
           <h3
-            className={`font-black text-base mb-4 ${
+            className={`font-black text-xl mb-4 ${
               isActive ? "text-white" : "text-[#1b2a47]"
             }`}
           >
             {ministry.title}
           </h3>
 
-          <div className="grid grid-cols-2 gap-2 mb-4">
+          <div className="grid grid-cols-2 gap-3 mb-5">
             <span
-              className={`text-[10px] px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-xs px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -160,7 +160,7 @@ const MinistryCard = ({
             </span>
 
             <span
-              className={`text-[10px] px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-xs px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -170,7 +170,7 @@ const MinistryCard = ({
             </span>
 
             <span
-              className={`text-[10px] px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-xs px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -180,7 +180,7 @@ const MinistryCard = ({
             </span>
 
             <span
-              className={`text-[10px] px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
+              className={`text-xs px-2 py-2 rounded-full font-bold border text-center transition-colors duration-500 shadow-sm ${
                 isActive
                   ? "bg-[#334155] text-white border-transparent"
                   : "bg-gray-50 text-gray-600 border-gray-200"
@@ -195,7 +195,7 @@ const MinistryCard = ({
               e.stopPropagation();
               onMoreClick();
             }}
-            className={`w-full py-2 rounded-full text-xs font-bold transition-colors duration-500 border ${
+            className={`w-full py-2.5 rounded-full text-sm font-bold transition-colors duration-500 border ${
               isActive
                 ? "border-gray-500 text-gray-300 hover:bg-white/10 hover:text-white"
                 : "border-gray-200 text-gray-700 hover:bg-gray-50"
@@ -223,15 +223,15 @@ const ServiceBox = ({
   <div
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
-    className={`flex items-center gap-3 bg-white px-5 py-3 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:border-[#d8bb88] transition-all cursor-pointer w-[280px] group ${
+    className={`flex items-center gap-4 bg-white px-6 py-4 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:border-[#d8bb88] transition-all cursor-pointer w-[360px] group ${
       isRight ? "flex-row-reverse text-left" : "text-right"
     }`}
   >
-    <div className="bg-[#f5f7fa] p-2 rounded-xl text-[#1b2a47] group-hover:bg-[#1b2a47] group-hover:text-white transition-colors duration-300">
-      <Icon className="w-5 h-5" />
+    <div className="bg-[#f5f7fa] p-3 rounded-xl text-[#1b2a47] group-hover:bg-[#1b2a47] group-hover:text-white transition-colors duration-300">
+      <Icon className="w-7 h-7" />
     </div>
 
-    <span className="font-bold text-sm text-gray-800 flex-1 group-hover:text-[#1b2a47] transition-colors">
+    <span className="font-bold text-lg text-gray-800 flex-1 group-hover:text-[#1b2a47] transition-colors">
       {title}
     </span>
   </div>
@@ -404,14 +404,13 @@ const Home = () => {
         {/* Top Titles */}
 
         <div className="absolute top-10 left-0 w-full px-10 flex justify-between items-start z-30">
-          <button className="flex items-center gap-2 px-6 py-2.5 border border-gray-200 rounded-full text-sm font-bold text-gray-600 bg-white hover:bg-gray-50 transition-all shadow-sm">
+          <button className="flex items-center gap-2 px-8 py-3 border border-gray-200 rounded-full text-base font-bold text-gray-600 bg-white hover:bg-gray-50 transition-all shadow-sm">
             جميع الوزارات
-
-            <ChevronDown className="w-4 h-4 text-gray-400" />
+            <ChevronDown className="w-5 h-5 text-gray-400" />
           </button>
 
           <div className="absolute left-1/2 -translate-x-1/2 top-0">
-            <h2 className="text-3xl font-black text-[#1b2a47]">
+            <h2 className="text-5xl font-black text-[#1b2a47]">
               الوزارات
             </h2>
           </div>
@@ -419,11 +418,11 @@ const Home = () => {
 
         {/* Cards Stack & Wheel Wrapper */}
 
-        <div className="relative z-10 flex flex-col items-center w-full max-w-[450px] mx-auto mt-16">
+        <div className="relative z-10 flex flex-col items-center w-full max-w-[550px] mx-auto mt-24">
           {/* Golden Wheel */}
 
           <motion.div
-            className="absolute top-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full border-[14px] border-[#d8bb88] flex items-center justify-center z-0 pointer-events-none shadow-xl"
+            className="absolute top-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full border-[18px] border-[#d8bb88] flex items-center justify-center z-0 pointer-events-none shadow-xl"
             style={{ right: "-960px" }}
             animate={{ rotate: activeMinIndex * -20 }}
             transition={{
@@ -435,7 +434,7 @@ const Home = () => {
             {/* Egyptian Eagle */}
 
             <motion.div
-              className="w-[450px] h-[450px] flex items-center justify-center opacity-100"
+              className="w-[600px] h-[600px] flex items-center justify-center opacity-100"
               animate={{ rotate: activeMinIndex * 20 }}
               transition={{
                 type: "spring",
@@ -496,9 +495,9 @@ const Home = () => {
       {/* ============== COMPASS SERVICES ================= */}
       {/* ================================================= */}
 
-      <div className="w-full bg-[#f8f9fa] py-24 border-t border-gray-100">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-black text-center text-[#1b2a47] mb-24">
+      <div className="w-full bg-[#f8f9fa] py-32 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-5xl font-black text-center text-[#1b2a47] mb-32">
             ما الخدمة التي تحتاجها؟
           </h2>
 
@@ -534,15 +533,15 @@ const Home = () => {
             {/* Compass */}
 
             <div
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] z-0"
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] h-[450px] z-0"
               onMouseLeave={() => setNeedleAngle(15)}
             >
-              <div className="w-full h-full rounded-full border-[14px] border-[#1b2a47] relative shadow-xl bg-white flex items-center justify-center">
-                <div className="absolute inset-3 rounded-full border-[4px] border-dashed border-red-500/30" />
+              <div className="w-full h-full rounded-full border-[18px] border-[#1b2a47] relative shadow-xl bg-white flex items-center justify-center">
+                <div className="absolute inset-4 rounded-full border-[4px] border-dashed border-red-500/30" />
 
-                <div className="absolute inset-8 rounded-full border border-gray-100 flex items-center justify-center">
+                <div className="absolute inset-10 rounded-full border border-gray-100 flex items-center justify-center">
                   <motion.div
-                    className="relative w-16 h-64 flex flex-col items-center justify-center origin-center"
+                    className="relative w-20 h-80 flex flex-col items-center justify-center origin-center"
                     animate={{ rotate: needleAngle }}
                     transition={{
                       type: "spring",
@@ -551,9 +550,9 @@ const Home = () => {
                       mass: 0.8,
                     }}
                   >
-                    <div className="w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-b-[120px] border-b-[#e53e3e]" />
+                    <div className="w-0 h-0 border-l-[35px] border-l-transparent border-r-[35px] border-r-transparent border-b-[160px] border-b-[#e53e3e]" />
 
-                    <div className="w-0 h-0 border-l-[25px] border-l-transparent border-r-[25px] border-r-transparent border-t-[120px] border-t-[#1b2a47]" />
+                    <div className="w-0 h-0 border-l-[35px] border-l-transparent border-r-[35px] border-r-transparent border-t-[160px] border-t-[#1b2a47]" />
 
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-[#d8bb88] border-[4px] border-white shadow-md z-10 flex items-center justify-center">
                       <div className="w-4 h-4 rounded-full bg-[#1b2a47]" />
@@ -594,21 +593,21 @@ const Home = () => {
 
           {/* More Services */}
 
-          <div className="flex justify-center mt-24">
-            <button className="flex items-center gap-2 px-10 py-4 rounded-full border border-gray-300 bg-white hover:bg-gray-50 text-base font-bold text-gray-700 transition-all shadow-sm">
-              <SearchIcon className="w-5 h-5 text-gray-500" />
+          <div className="flex justify-center mt-32">
+            <button className="flex items-center gap-3 px-12 py-5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 text-lg font-bold text-gray-700 transition-all shadow-sm">
+              <SearchIcon className="w-6 h-6 text-gray-500" />
               المزيد من الخدمات
             </button>
           </div>
 
           {/* Popular Services */}
 
-          <div className="mt-20 text-center">
-            <p className="text-gray-500 font-bold mb-8 text-base">
+          <div className="mt-24 text-center">
+            <p className="text-gray-500 font-bold mb-10 text-xl">
               الخدمات الأكثر شيوعا
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-5">
               {[
                 "بطاقة الرقم القومي",
                 "استخراج شهادة ميلاد مميكنة",
@@ -617,9 +616,9 @@ const Home = () => {
               ].map((tag) => (
                 <span
                   key={tag}
-                  className="bg-white border border-gray-200 px-6 py-3 rounded-full text-sm font-bold text-gray-600 shadow-sm flex items-center gap-3 cursor-pointer hover:border-[#d8bb88] hover:text-[#1b2a47] transition-all"
+                  className="bg-white border border-gray-200 px-8 py-4 rounded-full text-base font-bold text-gray-600 shadow-sm flex items-center gap-3 cursor-pointer hover:border-[#d8bb88] hover:text-[#1b2a47] transition-all"
                 >
-                  <Compass className="w-4 h-4 text-[#d8bb88]" />
+                  <Compass className="w-5 h-5 text-[#d8bb88]" />
                   {tag}
                 </span>
               ))}
@@ -632,9 +631,9 @@ const Home = () => {
       {/* ================= NEWS SECTION ================== */}
       {/* ================================================= */}
 
-  <div className="w-full bg-white py-16">
+  <div className="w-full bg-white py-20">
   <div className="max-w-7xl mx-auto px-4 text-center">
-    <h2 className="text-3xl font-black text-[#1b2a47] mb-12">
+    <h2 className="text-5xl font-black text-[#1b2a47] mb-16">
       اخر الاخبار
     </h2>
 
@@ -668,14 +667,14 @@ const Home = () => {
                     ? 50
                     : visibleNews.length - idx,
               }}
-              className={`relative w-64 sm:w-72 bg-white border border-gray-200 rounded-[28px] p-4 transition-all duration-300 flex-shrink-0 text-right flex flex-col justify-between h-[430px] cursor-pointer ${
+              className={`relative w-72 sm:w-80 bg-white border border-gray-200 rounded-[28px] p-5 transition-all duration-300 flex-shrink-0 text-right flex flex-col justify-between h-[480px] cursor-pointer ${
                 (hoveredNewsIndex ?? 0) === idx
                     ? "scale-105 opacity-100 border-[#d8bb88] shadow-2xl"
                     : "scale-[0.93] opacity-55 blur-[0.5px] shadow-sm"
               }`}
             >
               {/* صورة الخبر */}
-              <div className="relative overflow-hidden rounded-[20px] h-48 w-full mb-4 flex-shrink-0">
+              <div className="relative overflow-hidden rounded-[20px] h-56 w-full mb-5 flex-shrink-0">
                 <img
                   src={item.image}
                   alt={item.title}
@@ -690,12 +689,12 @@ const Home = () => {
               {/* تفاصيل الخبر */}
               <div className="flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="font-bold text-sm text-[#1b2a47] line-clamp-2 mb-2 leading-relaxed">
+                  <h3 className="font-bold text-lg text-[#1b2a47] line-clamp-2 mb-3 leading-relaxed">
                     {item.title}
                   </h3>
                   
                   {item.description && (
-                    <p className="text-[11px] text-gray-400 line-clamp-2 mb-4 leading-normal">
+                    <p className="text-sm text-gray-400 line-clamp-2 mb-5 leading-normal">
                       {item.description}
                     </p>
                   )}
