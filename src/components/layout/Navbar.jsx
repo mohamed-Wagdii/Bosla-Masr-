@@ -6,10 +6,10 @@ import { useTheme } from "../../context/ThemeContext";
 
 const navLinks = [
   { label: "الصفحة الرئيسية", to: "/" },
-  { label: "الوزارات", to: "/ministry" },
+  { label: "الوزارات", to: "/ministries" },
   { label: "مبادرات وبرامج تدريبية", to: "/initiatives" },
-  { label: "الأخبار والفعاليات", to: "/#news" },
-  { label: "وظائف الوزارات", to: "/#jobs" },
+  { label: "الأخبار والفعاليات", to: "/news" },
+  { label: "وظائف الوزارات", to: "/jobs" },
   { label: "عن بوصلة مصر", to: "/about" },
 ];
 
@@ -43,7 +43,10 @@ const Navbar = () => {
 
           <div className="hidden flex-1 items-center justify-center gap-x-6 xl:flex 2xl:gap-x-8">
             {navLinks.map((link) => {
-              const isActive = link.to === pathname;
+              const isActive =
+                link.to === pathname ||
+                (link.to === "/ministries" && (pathname === "/ministry" || pathname.startsWith("/ministries"))) ||
+                (link.to === "/news" && (pathname === "/news" || pathname.startsWith("/events")));
 
               return (
                 <Link
@@ -140,7 +143,10 @@ const Navbar = () => {
           <div className="border-t border-slate-100 py-4 xl:hidden dark:border-slate-800">
             <div className="grid gap-1 text-right">
               {navLinks.map((link) => {
-                const isActive = link.to === pathname;
+                const isActive =
+                  link.to === pathname ||
+                  (link.to === "/ministries" && (pathname === "/ministry" || pathname.startsWith("/ministries"))) ||
+                  (link.to === "/news" && (pathname === "/news" || pathname.startsWith("/events")));
 
                 return (
                   <Link

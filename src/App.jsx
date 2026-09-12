@@ -11,6 +11,9 @@ import Initiative from './pages/Initiative';
 import Initiatives from './pages/Initiatives';
 import TrainingPrograms from './pages/TrainingPrograms';
 import Events from './pages/Events';
+import NewsEvents from './pages/NewsEvents';
+import Ministries from './pages/Ministries';
+import Jobs from './pages/Jobs';
 import { ThemeProvider } from './context/ThemeContext';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -25,6 +28,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/ministry" element={<Ministry />} />
+            <Route path="/ministries" element={<Ministries />} />
+            <Route path="/jobs" element={<Jobs />} />
+            <Route path="/news" element={<NewsEvents />} />
             <Route path="/search" element={<Search />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
@@ -32,7 +38,7 @@ function App() {
             <Route path="/initiative" element={<Initiative />} />
             <Route path="/initiatives" element={<Initiatives />} />
             <Route path="/training-programs" element={<TrainingPrograms />} />
-            <Route path="/events" element={<Events />} />
+            <Route path="/events" element={<NewsEvents />} />
           </Routes>
         </main>
         <Footer />
