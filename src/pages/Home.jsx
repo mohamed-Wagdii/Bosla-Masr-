@@ -109,7 +109,7 @@ const MinistryCard = ({
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={onClick}
-        className={`relative flex items-stretch p-3 rounded-[28px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[240px] ${
+        className={`relative flex items-stretch p-3 rounded-[28px] cursor-pointer transition-all duration-500 w-full z-10 min-h-[300px] ${
           isActive
             ? "bg-[#1b2a47] text-white shadow-2xl scale-[1.02] border border-[#d8bb88]/30"
             : "bg-white text-gray-800 border border-gray-200 hover:border-gray-300 hover:shadow-md scale-100"
@@ -418,7 +418,7 @@ const Home = () => {
 
         {/* Cards Stack & Wheel Wrapper */}
 
-        <div className="relative z-10 flex flex-col items-center w-full max-w-[55%] mx-auto mt-24">
+        <div className="relative z-10 flex flex-col items-center w-full max-w-[52%] ml-[4%] mt-24">
           {/* Golden Wheel */}
 
           <motion.div
