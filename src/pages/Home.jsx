@@ -343,9 +343,11 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-gray-800 mb-10 font-bold drop-shadow-sm"
+            className="text-xl md:text-2xl text-gray-800 dark:text-slate-100 mb-10 font-bold drop-shadow-sm leading-relaxed"
           >
-            كل خدمات وفرص الوزارات المصرية في مكان واحد
+            من حضارة أرشدت العالم...
+            <br />
+            إلى بوصلة ترشدك اليوم
           </motion.p>
 
           <motion.div
@@ -700,7 +702,7 @@ const Home = () => {
                 </div>
 
                 {/* زر اقرأ المزيد */}
-                <button className="w-full py-2 px-4 rounded-full border border-[#1b2a47] text-[#1b2a47] font-bold text-xs hover:bg-[#1b2a47] hover:text-white transition-colors duration-300">
+                <button className="w-full py-2 px-4 rounded-full border border-[#1b2a47] text-[#1b2a47] font-bold text-xs hover:bg-[#1b2a47] hover:text-white dark:border-[#d8bb88] dark:text-[#d8bb88] dark:hover:bg-[#d8bb88] dark:hover:text-[#1b2a47] transition-colors duration-300">
                   اقرأ المزيد
                 </button>
               </div>

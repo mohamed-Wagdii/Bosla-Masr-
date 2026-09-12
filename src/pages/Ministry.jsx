@@ -68,7 +68,17 @@ const SectionCard = ({ item, isHovered, onHover, onLeave, isSpecial }) => {
                 {item.subItems.map((sub, idx) => (
                   <button 
                     key={idx} 
-                    onClick={() => navigate('/search')}
+                    onClick={() => {
+                      if (sub === 'مبادرات') {
+                        navigate('/initiatives');
+                      } else if (sub === 'برامج التدريب') {
+                        navigate('/training-programs');
+                      } else if (sub === 'احداث مستقلة' || sub === 'احداث مرتبطه') {
+                        navigate('/events');
+                      } else {
+                        navigate('/search');
+                      }
+                    }}
                     className="group flex max-w-full items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-xs font-bold text-gray-700 shadow-sm transition-all hover:border-[#1b2a47] hover:text-[#1b2a47]"
                   >
                     <span className="truncate">{sub}</span>
@@ -79,7 +89,15 @@ const SectionCard = ({ item, isHovered, onHover, onLeave, isSpecial }) => {
             )}
 
             <button 
-              onClick={() => navigate('/search')}
+              onClick={() => {
+                if (item.id === 'initiatives') {
+                  navigate('/initiatives');
+                } else if (item.id === 'news') {
+                  navigate('/events');
+                } else {
+                  navigate('/search');
+                }
+              }}
               className="mx-auto inline-block rounded-full border border-gray-200 px-8 py-2 text-xs font-bold text-gray-600 transition-colors hover:bg-gray-50"
             >
               اطلع على المزيد
@@ -119,7 +137,8 @@ const Ministry = () => {
       id: 'news',
       title: 'الاخبار و الفعاليات',
       icon: <img src={nesr3} alt='nesr1'/>,
-      hoverContent: 'تابع أحدث الأخبار والفعاليات الخاصة بوزارة الاتصالات والمؤتمرات التقنية.'
+      hoverContent: 'تابع أحدث الأخبار والفعاليات الخاصة بوزارة الاتصالات والمؤتمرات التقنية.',
+      subItems: ['احداث مستقلة', 'احداث مرتبطه']
     },
     {
       id: 'jobs',
