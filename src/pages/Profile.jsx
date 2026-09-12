@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Edit2, Bookmark, ChevronLeft, ChevronRight, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import itiLogo from '../assets/iti1.png';
+import digiliansLogo from '../assets/digilians.png';
 
 const ProfilePage = () => {
   return (
@@ -110,7 +112,7 @@ const ProfilePage = () => {
                 </div>
                 
                 <div className="mt-12 mb-6 flex-1 flex flex-col items-center justify-center">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ITI_Logo.png/800px-ITI_Logo.png" alt="ITI Logo" className="h-32 object-contain mb-4" />
+                  <img src={itiLogo} alt="ITI Logo" className="h-32 object-contain mb-4" />
                 </div>
                 
                 <div className="text-center mb-6">
@@ -137,11 +139,7 @@ const ProfilePage = () => {
                 </div>
                 
                 <div className="mt-12 mb-6 flex-1 flex flex-col items-center justify-center">
-                  <div className="text-[#00A4EF] mb-2 font-black text-5xl">DiGiLiANS</div>
-                  {/* Just a placeholder icon since I don't have the exact logo */}
-                  <div className="w-24 h-24 bg-[#00A4EF]/10 rounded-2xl border-4 border-[#00A4EF] rotate-45 flex items-center justify-center mb-4">
-                     <div className="w-12 h-12 bg-[#00A4EF] rounded-lg -rotate-45"></div>
-                  </div>
+                  <img src={digiliansLogo} alt="DiGiLiANS Logo" className="h-32 object-contain mb-4" />
                 </div>
                 
                 <div className="text-center mb-6">
